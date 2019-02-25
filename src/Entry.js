@@ -10,7 +10,7 @@ function Entry(props) {
         { props.entry.author && <p className="entry__author">{props.entry.author}</p> }
         { props.entry.recipient && <p className="entry__recipient">{props.entry.recipient}</p> }
         { props.entry.subject && <p className="entry__subject">{props.entry.subject}</p> }
-        <p className="entry__body">{props.entry.body}</p>
+        <p className="entry__body" dangerouslySetInnerHTML={{ __html: props.entry.body }}></p>
       </article>
     );
   }
